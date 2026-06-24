@@ -12,17 +12,18 @@ Build an end-to-end sentiment analysis system capable of automatically predictin
 
 ## Project Structure
 
+```text
 AMAZON-REVIEW-SENTIMENT-ANALYSIS/
 
-├── notebook2.ipynb
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── model.pkl
-├── vectorizer.pkl
+├── notebook2.ipynb         # Complete ML workflow
+├── README.md               # Project documentation
+├── requirements.txt        # Project dependencies
+├── .gitignore              # Git ignore rules
+├── model.pkl               # Trained LinearSVC model
+├── vectorizer.pkl          # TF-IDF vectorizer
 ├── Cell_Phones_and_Accessories_5.json (ignored from Git)
 └── future_streamlit_app/
----
+```
 
 ## Current Progress
 
