@@ -10,6 +10,10 @@ A Machine Learning and Natural Language Processing project that classifies Amazo
 
 Build an end-to-end sentiment analysis system capable of automatically predicting customer sentiment from Amazon product reviews and deploy it as an interactive web application.
 
+## Live Application
+
+🔗 Live Demo: https://omkar-amazon-review-sentiment-analysis-ixcebwkhgyiqjv9jxwqqxz.streamlit.app/
+
 ## Project Structure
 
 ```text
@@ -34,8 +38,7 @@ AMAZON-REVIEW-SENTIMENT-ANALYSIS/
 * [x] Phase 4: TF-IDF Feature Engineering
 * [x] Phase 5: Model Training & Evaluation
 * [x] Phase 6: Streamlit Web Application
-* [ ] Phase 7: Deployment
-
+* [x] Phase 7: Deployment
 ---
 
 ## Dataset Information
