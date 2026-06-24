@@ -15,6 +15,7 @@ Build an end-to-end sentiment analysis system capable of automatically predictin
 ```text
 AMAZON-REVIEW-SENTIMENT-ANALYSIS/
 
+├── app.py
 ├── notebook2.ipynb         # Complete ML workflow
 ├── README.md               # Project documentation
 ├── requirements.txt        # Project dependencies
@@ -32,7 +33,7 @@ AMAZON-REVIEW-SENTIMENT-ANALYSIS/
 * [x] Phase 3: Text Preprocessing 
 * [x] Phase 4: TF-IDF Feature Engineering
 * [x] Phase 5: Model Training & Evaluation
-* [ ] Phase 6: Streamlit Web Application
+* [x] Phase 6: Streamlit Web Application
 * [ ] Phase 7: Deployment
 
 ---
