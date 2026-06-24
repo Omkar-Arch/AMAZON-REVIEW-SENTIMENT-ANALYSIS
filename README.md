@@ -1,6 +1,6 @@
 # Amazon Review Sentiment Analysis
 
--- Work In Progress
+
 
 A Machine Learning and Natural Language Processing project that classifies Amazon product reviews as Positive or Negative sentiments using text preprocessing, feature engineering, and machine learning algorithms.
 
