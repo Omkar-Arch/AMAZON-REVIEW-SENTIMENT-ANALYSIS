@@ -12,16 +12,16 @@ Build an end-to-end sentiment analysis system capable of automatically predictin
 
 ## Project Structure
 
-```text
 AMAZON-REVIEW-SENTIMENT-ANALYSIS/
 
 ├── notebook2.ipynb
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
+├── model.pkl
+├── vectorizer.pkl
 ├── Cell_Phones_and_Accessories_5.json (ignored from Git)
 └── future_streamlit_app/
-```
 ---
 
 ## Current Progress
@@ -29,8 +29,8 @@ AMAZON-REVIEW-SENTIMENT-ANALYSIS/
 * [x] Phase 1: Dataset Preparation
 * [x] Phase 2: Exploratory Data Analysis (EDA)
 * [x] Phase 3: Text Preprocessing 
-* [ ] Phase 4: TF-IDF Feature Engineering
-* [ ] Phase 5: Model Training & Evaluation
+* [x] Phase 4: TF-IDF Feature Engineering
+* [x] Phase 5: Model Training & Evaluation
 * [ ] Phase 6: Streamlit Web Application
 * [ ] Phase 7: Deployment
 
@@ -112,6 +112,23 @@ phone absolut amaz work perfect
 
 ---
 
+## Feature Engineering
+
+TF-IDF (Term Frequency–Inverse Document Frequency) Vectorization was used to convert processed review text into numerical feature vectors suitable for machine learning models.
+
+### Why TF-IDF?
+
+- Captures the importance of words within reviews
+- Reduces the influence of extremely common words
+- Works exceptionally well with traditional text classification algorithms
+- Efficient for large-scale sentiment analysis tasks
+
+### Configuration
+
+- Maximum Features: 5000
+- Input: Preprocessed Reviews
+- Output: Sparse Numerical Feature Matrix
+
 ## Technologies Used
 
 * Python
@@ -145,12 +162,13 @@ Raw Review
 
 ---
 
-## Models To Be Evaluated
+## Model Comparison
 
-* Multinomial Naive Bayes
-* Logistic Regression
-* LinearSVC
-* Random Forest (Optional)
+| Model | Accuracy | Precision | Recall | F1 Score |
+|---------|---------|---------|---------|---------|
+| Multinomial Naive Bayes | 88.27% | 88.06% | 99.90% | 93.60% |
+| Logistic Regression | 89.68% | 97.84% | 89.98% | 93.74% |
+| LinearSVC | **89.96%** | **97.32%** | **90.82%** | **93.96%** |
 
 ---
 
@@ -165,6 +183,33 @@ The following metrics will be used to compare model performance:
 * Confusion Matrix
 
 ---
+
+## Final Model Selection
+
+LinearSVC was selected as the production model because it achieved the highest overall performance across Accuracy, Recall, and F1 Score while maintaining strong generalization on unseen reviews.
+
+### Final Test Performance
+
+- Accuracy: 89.96%
+- Precision: 97.32%
+- Recall: 90.82%
+- F1 Score: 93.96%
+
+### Error Analysis
+
+- Test Samples: 10,000
+- Correct Predictions: 8,996
+- Misclassifications: 1,004
+
+The model demonstrated strong performance while maintaining balanced sentiment detection across both positive and negative reviews.
+
+## Model Interpretability
+
+To understand the model's decision-making process, LinearSVC feature weights were analyzed.
+
+Words with highly positive weights strongly influenced Positive predictions, while words with highly negative weights influenced Negative predictions.
+
+This helped verify that the model learned meaningful sentiment patterns rather than relying on superficial dataset characteristics such as review length.
 
 ## Future Improvements
 
